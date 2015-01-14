@@ -1,0 +1,11 @@
+{
+  "name": "sef",
+  "version": "0.0.0",
+  "preferGlobal": "true",
+   "dependencies": {
+       "jquery": "*"
+    },
+  "bin":{
+    "sef":"sef.js"
+  }
+}
