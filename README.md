@@ -1,5 +1,5 @@
 # SefariaCLU-T
-A command line utility (/tool) for sefaria texts.
+A command line utility (/tool) for sefaria texts. If you would like to see how this tool was made (or would like to learn how to make a command line tool in javascript), read the wiki.
 # Requirements:
 1. A Windows computer (sorry, Mac and Linux!)
 2. You are going to need <a href="http://www.nodejs.org/"> Node </a> set up and in your PATH.
