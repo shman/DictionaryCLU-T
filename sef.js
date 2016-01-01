@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 var jquery = require("jquery");
 if(process.argv[2]) {
-    var input = process.argv[2].replace("_", " ");
+    var input = process.argv.slice(2);
 }
-jquery.getJSON("http://www.sefaria.org/api/texts/"+input+"?commentary=0&context=0&callback=?",         function(data) {
-        var psuk= "";
-        for(var i = 0; i< data["text"].length; i++) {
-            psuk+=data["text"][i];
+jquery.getJSON("http://dictionaryapi.net/api/definition/"+input,         function(data) {
+        var returnVal= "";
+        for(var i = 0; i< data.length; i++) {
+            returnVal += i+1+"."+input+","+data[i]["PartOfSpeech"]+": ";
+            for(var k = 0; k<data[i].length; k++) {
+                returnVal += data[i]["Definitions"][k];
+            }
         };
 
-        console.log(psuk);
+        console.log(returnVal);
     
  });
